@@ -1,0 +1,90 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+html, body {
+  width: 100%;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: url("../img/background.jpeg");
+  background-position: center;
+  background-size: cover;
+  color: #000000;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  min-height: 100vh;
+}
+
+#container {
+  background-color: rgba(255, 255, 255, 0.3);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  flex-direction: column;
+  margin: 50px;
+  padding: 20px;
+  min-height: calc(100vh - (50px * 2) - (20px * 2));
+  width: calc(100% - (50px * 2) - (20px * 2));
+}
+
+h1 {
+  font-size: 36px;
+  margin: 10px 0 30px;
+  text-align: center;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 16px;
+  text-align: center;
+}
+
+.stream {
+  background-color: #fff;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.stream .avatar {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 10%;
+}
+.stream .avatar.online img {
+  border: solid 3px #4CAF50;
+}
+.stream .avatar.offline img {
+  border: solid 3px #FF5252;
+}
+.stream .avatar img {
+  border-radius: 50%;
+  width: 50px;
+}
+.stream .user {
+  flex-basis: 30%;
+  text-align: center;
+}
+.stream .game {
+  flex-basis: 60%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

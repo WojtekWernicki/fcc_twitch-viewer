@@ -1,0 +1,103 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+$margin: 50px;
+$container-padding: 20px;
+
+html, body {
+    width: 100%;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: url('../img/background.jpeg');
+    background-position: center;
+    background-size: cover;
+    color: #000000;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    min-height: 100vh;
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
+    margin: $margin;
+    padding: $container-padding;
+    min-height: calc(100vh - (#{$margin} * 2) - (#{$container-padding} * 2));
+    width: calc(100% - (#{$margin} * 2) - (#{$container-padding} * 2));
+}
+
+h1 {
+    font-size: 36px;
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+footer {
+    font-size: 16px;
+    text-align: center;
+}
+
+.stream {
+    background-color: #fff;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    .avatar {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 10%;
+
+        &.online {
+            img {
+                border: solid 3px #4CAF50;
+            }
+        }
+
+        &.offline {
+            img {
+                border: solid 3px #FF5252;
+            }
+        }
+
+        img {
+            border-radius: 50%;
+            width: 50px;
+        }
+    }
+
+    .user {
+        flex-basis: 30%;
+        text-align: center;
+    }
+
+    .game {
+        flex-basis: 60%;
+        text-align: center;
+    }
+}
